@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="CSS/detail_produk.css">
+<div class="container">
+    <div class="img-side">
+      <img id="gambar" src="img/menu/iphone3.webp" alt="Gambar Produk" />
+    </div>
+    <div class="details-side">
+      <div class="nama-barang" id="nama">iPhone 16e</div>
+      <div class="harga" id="harga">Rp12.000.000</div>
+      <div class="deskripsi" id="deskripsi">
+        <b>iPhone 16e</b> adalah pilihan terbaik untuk pengguna yang mengutamakan kepraktisan dan harga terjangkau tanpa mengorbankan performa. Cocok untuk pelajar, profesional muda, maupun penggunaan kedua.<br><br>
+        <b>Fitur Unggulan:</b>
+        <ul>
+          <li>Layar Liquid Retina HD 6,1 inci</li>
+          <li>Kamera 48MP dengan mode malam dan Smart HDR</li>
+          <li>Chipset A16 Bionic, hemat daya namun tetap cepat</li>
+          <li>Face ID, koneksi 5G, Touch ID di tombol samping</li>
+          <li>iOS 19</li>
+        </ul>
+        <b>Spesifikasi:</b>
+        <ul>
+          <li>Kapasitas: 128GB / 256GB</li>
+          <li>Kamera belakang: 48MP</li>
+          <li>Kamera depan: 12MP</li>
+          <li>Dual SIM, 5G Ready</li>
+          <li>Warna: Black, White, Blue, Red</li>
+        </ul>
+        <b>Garansi Resmi Apple Indonesia 1 Tahun</b>
+      </div>
+      <div class="bottom-actions">
+        <button class="btn-keranjang">Keranjang</button>
+        <button class="btn-beli">Beli</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    // Gambar
+    if (params.get('gambar')) {
+      document.getElementById('gambar').src = params.get('gambar');
+    }
+
+    // Nama
+    if (params.get('nama')) {
+      document.getElementById('nama').textContent = params.get('nama');
+    }
+
+    // Harga
+    if (params.get('harga')) {
+      document.getElementById('harga').textContent = 'Rp' + params.get('harga');
+    }
+
+    // Deskripsi (bisa HTML, misal jika ingin format <br>, <ul>, dll)
+    if (params.get('deskripsi')) {
+      document.getElementById('deskripsi').innerHTML = params.get('deskripsi');
+    }
+  </script>

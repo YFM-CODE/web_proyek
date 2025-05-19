@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="CSS/detail_produk.css">
+<div class="container">
+    <div class="img-side">
+      <img id="gambar" src="img/menu/iphone1.webp" alt="Gambar Produk" />
+    </div>
+    <div class="details-side">
+      <div class="nama-barang" id="nama">iPhone 16 Pro Max</div>
+      <div class="harga" id="harga">Rp23.000.000</div>
+      <div class="deskripsi" id="deskripsi">
+        Nikmati inovasi terbaru dari Apple dengan <b>iPhone 16 Pro Max</b>. Hadir dengan desain Titanium baru yang lebih ringan dan kokoh, serta layar Super Retina XDR ProMotion 6,9 inci yang luar biasa tajam. Didukung chip A18 Pro yang sangat bertenaga, pengalaman multitasking, gaming, dan fotografi menjadi semakin lancar dan profesional.<br><br>
+        <b>Fitur Unggulan:</b>
+        <ul>
+          <li>Layar Super Retina XDR 6,9 inci dengan ProMotion</li>
+          <li>Kamera Pro 48MP Ultra Wide, Telephoto 5x Optical Zoom, Night Mode</li>
+          <li>Chipset A18 Pro terbaru</li>
+          <li>Baterai tahan lama, fast charging, MagSafe</li>
+          <li>Dynamic Island, Face ID, iOS 19</li>
+        </ul>
+        <b>Spesifikasi:</b>
+        <ul>
+          <li>Kapasitas: 256GB / 512GB / 1TB</li>
+          <li>Kamera belakang: 48MP + 12MP + 12MP</li>
+          <li>Kamera depan: 12MP TrueDepth</li>
+          <li>Dual SIM, 5G Ready, Wi-Fi 6E</li>
+          <li>Warna: Titanium Black, Titanium Silver, Blue Titanium, Natural Titanium</li>
+        </ul>
+        <b>Garansi Resmi Apple Indonesia 1 Tahun</b>
+      </div>
+      <div class="bottom-actions">
+        <button class="btn-keranjang">Keranjang</button>
+        <button class="btn-beli">Beli</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    // Gambar
+    if (params.get('gambar')) {
+      document.getElementById('gambar').src = params.get('gambar');
+    }
+
+    // Nama
+    if (params.get('nama')) {
+      document.getElementById('nama').textContent = params.get('nama');
+    }
+
+    // Harga
+    if (params.get('harga')) {
+      document.getElementById('harga').textContent = 'Rp' + params.get('harga');
+    }
+
+    // Deskripsi (bisa HTML, misal jika ingin format <br>, <ul>, dll)
+    if (params.get('deskripsi')) {
+      document.getElementById('deskripsi').innerHTML = params.get('deskripsi');
+    }
+  </script>

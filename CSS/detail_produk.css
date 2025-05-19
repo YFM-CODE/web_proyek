@@ -1,0 +1,149 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f8fb;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 40px auto;
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 24px #d6e4f0;
+  overflow: hidden;
+  min-height: 420px;
+}
+.img-side {
+  flex: 1.2;
+  background: #f2f5fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  min-width: 0;
+}
+.img-side img {
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #e5e5e5;
+  object-fit: contain;
+  background: #fff;
+}
+.details-side {
+  flex: 2;
+  padding: 40px 36px 80px 36px;
+  display: flex;
+  flex-direction: column;
+  position: static;
+}
+.nama-barang {
+  font-size: 2.1em;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #27374d;
+}
+.harga {
+  color: #17994a;
+  font-size: 1.3em;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.deskripsi {
+  font-size: 1.1em;
+  margin-bottom: auto;
+  color: #444;
+  line-height: 1.6;
+}
+.bottom-actions {
+  position: st;
+  bottom: 36px;
+  right: 36px;
+  display: flex;
+  gap: 14px;
+}
+.btn-beli {
+  background: linear-gradient(to right, #17994a, #39b87c);
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  border-radius: 9px;
+  font-size: 1.08em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #e3ffe8;
+}
+.btn-beli:hover {
+  background: linear-gradient(to right, #0e7a37, #17994a);
+  box-shadow: 0 4px 14px #bbffcc;
+}
+.btn-keranjang {
+  background: #fff;
+  color: #17994a;
+  border: 2px solid #17994a;
+  padding: 15px 28px;
+  border-radius: 9px;
+  font-size: 1.08em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #e3ffe8;
+}
+.btn-keranjang:hover {
+  background: #17994a;
+  color: #fff;
+  box-shadow: 0 4px 14px #bbffcc;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    margin: 20px;
+    min-height: unset;
+  }
+  .img-side {
+    padding: 18px;
+  }
+  .details-side {
+    padding: 26px 18px 90px 18px;
+  }
+  .bottom-actions {
+    position: static;
+    margin-top: 28px;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 8px;
+    box-shadow: 0 1px 7px #d6e4f0;
+  }
+  .img-side {
+    padding: 10px;
+    min-height: 190px;
+  }
+  .details-side {
+    padding: 12px 6px 110px 6px;
+  }
+  .nama-barang {
+    font-size: 1.3em;
+  }
+  .harga {
+    font-size: 1.08em;
+  }
+  .bottom-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .btn-beli,
+  .btn-keranjang {
+    padding: 11px 0;
+    font-size: 1em;
+  }
+}
